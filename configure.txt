@@ -1,10 +1,18 @@
 create new  project 
 browse catalog
 select ruby
+(githubURL http://github.com/kirancchand/ruby-ex.git)
+
+Select Advanced Option  -> Check deploy image 
+			-> Uncheck configure a webhook buil trigger
+			-> Uncheck Automatically build a new image when the builder image changes
+  			-> Uncheck Launch the first build when the build configuration is created 
+			-> Uncheck New imageis available
+
 click build->pipeline->add to project->import yaml/json
 
 Add below line
-
+===========================================
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
@@ -46,7 +54,7 @@ spec:
       type: Generic
 status:
   lastVersion: 3
-
+==============================================
 
 also in postreceive
 we can get url from
